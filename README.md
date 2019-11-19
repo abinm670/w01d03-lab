@@ -6,9 +6,17 @@ Example string: 'Sara'
 Expected Output: 'araS':
 
 ```
+function alphabetOrder(name)
+{
+   //Use the split() method to return a new array
+   //Use the reverse() method to reverse the new created array
+   //Use the join() method to join all elements of the array into a string
+    return name.split("").reverse().join("");
+}
 
+x=alphabetOrder("hello");
+console.log(x);
 
-alphabetOrder("hello");
 ```
 ---
 #### Exercise 2:
@@ -19,6 +27,12 @@ Expected Output: 54321
 
 ```
 
+function reverseANumber(n)
+{
+    n = n + "";
+	return n.split("").reverse().join("");
+}
+
 
 reverseANumber(987654321);
 ```
@@ -28,9 +42,14 @@ Write a JavaScript function that accepts a number as a parameter and check the n
 Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
 
 ```
+const isPrime = num => {
+    for(let i = 2; i < num; i++)
+      if(num % i === 0) return "Not a prime number";
+    return "prime Number";
+  }
 
+  console.log(isPrime(3))
 
-testPrime(37);
 ```
 ---
 
@@ -47,14 +66,31 @@ testPrime(37);
 Write a JavaScript program to pass a 'JavaScript function' as parameter.
 
 ```
+function addStudent(id, yesTes)
+{
+    yesTes()
+    {
+         console.log("test " + id)
+    } 
+}
 
-addStudent(1, refreshStudentList);
+function go() {
+    console.log('Happy Coding');
+}
+
+addStudent(2, go);
 ```
 ---
 #### Exercise 6:
 Write a JavaScript program to pass a 'JavaScript function' as parameter.
+
 Write a function that takes the base and height of a triangle and return its area.
 Examples
+function triArea(num1, num2)
+{
+    return (num1*num2)/2; 
+}
+
 triArea(3, 2) ➞ 3
 
 ---
@@ -62,7 +98,11 @@ triArea(3, 2) ➞ 3
 Write a function that takes an integer minutes and converts it to seconds.
 
 ```
+function convert(min)
+{
+    return min*60
 
+}
 convert(2);
 ```
 ---
